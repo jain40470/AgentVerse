@@ -1,4 +1,4 @@
-export const fetchResponse = async (message) => {
+export const fetchResponse_chatbot = async (message) => {
   try {
     const response = await fetch("http://localhost:8000/chatbot", {
       method: "POST",

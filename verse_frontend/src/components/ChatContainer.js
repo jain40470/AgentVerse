@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ChatBox from './ChatBox';
-import MessageInput from './MessageInput';
-import { fetchResponse } from '../utils/api';
+import ChatBox from './Chatbot/ChatBox';
+import MessageInput from './Chatbot/MessageInput';
+import { fetchResponse_chatbot } from '../utils/chatbot_api';
 
 const ChatContainer = () => {
   const [message, setMessage] = useState("");  // User's input message
@@ -31,7 +31,7 @@ const ChatContainer = () => {
 
     try {
       // Fetch the AI response
-      const aiMessage = await fetchResponse(message);
+      const aiMessage = await fetchResponse_chatbot(message);
 
       // Append the AI's response to the chat history
       const updatedHistoryWithAI = [...updatedChatHistory, aiMessage];
