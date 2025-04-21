@@ -22,5 +22,9 @@ uvicorn main:app --reload
 npx create-react-app verse_frontend
 cd verse_frontend
 
-npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
-AgentVerse
+# Git
+
+git status
+git add .
+git commit -m "message"
+git push origin main
