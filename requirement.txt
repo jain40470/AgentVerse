@@ -2,3 +2,6 @@ langchain_groq
 langgraph
 dotenv
 uvicorn
+langchain_core
+typing
+fastapi

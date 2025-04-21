@@ -33,10 +33,8 @@ def process_message(req: MessageRequest):
 
         for event in graph.stream({'message': ("user", req.message)}):
             for value in event.values():
-                for msg in value["message"]:
-                    messages.append(msg)
-                    # role = "assistant" if isinstance(msg, AIMessage) else "user"
-                    # messages.append({"role": role, "content": msg.content})
+                    role = value["message"].type
+                    messages.append({"role": role, "content": value["message"].content})
 
         return {"message": messages}
 

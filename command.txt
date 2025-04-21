@@ -1,0 +1,26 @@
+# To create a env
+
+python3 -m venv AgentVerse
+source AgentVerse/bin/activate
+pip install ipykernel
+python -m ipykernel install --user --name=AgentVerse --display-name "Python (AgentVerse)"
+
+
+# To install dependenices
+
+pip3 install -r requirements.txt
+
+# For fastapi Backend
+
+pip3 install fastapi
+pip3 install uvicorn
+
+uvicorn main:app --reload
+
+# For Frontend React
+
+npx create-react-app verse_frontend
+cd verse_frontend
+
+npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
+AgentVerse
