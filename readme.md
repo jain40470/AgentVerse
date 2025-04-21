@@ -13,9 +13,9 @@
 
 ```
 LG_AgentVerse/
-├── backend/                  # Backend (FastAPI) source code
-│   └── src/                  # Backend source code, API routes
-│   └── models/               # LangGraph agent models
+├── Backend/src/backend/                  # Backend (FastAPI) source code
+│                  └── src/               # Backend source code, API routes
+│                  └── main.py
 ├── frontend/                 # Frontend (React) code
 │   └── public/               # Public assets (HTML, images)
 │   └── src/                  # React components, state management
