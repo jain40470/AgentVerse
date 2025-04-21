@@ -92,8 +92,8 @@ cd LG_AgentVerse
 
 ### Example API Usage
 
-- **Chatbot**: Send a POST request to `/chat` with a user message to receive a response from the chatbot.
-- **Code Review**: Send a POST request to `/code-review` with the code you want to be reviewed, and the agent will provide feedback.
+- **Chatbot**: Send a POST request to `/chabot` with a user message to receive a response from the chatbot.
+<!-- - **Code Review**: Send a POST request to `/code-review` with the code you want to be reviewed, and the agent will provide feedback. -->
 
 ## 📄 License
 
