@@ -78,7 +78,7 @@ cd LG_AgentVerse
 2. Start the React frontend:
 
    ```bash
-   cd frontend
+   cd verse_frontend
    npm start
    ```
 
