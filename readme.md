@@ -1,7 +1,7 @@
 
-# LG_AgentVerse
+# AgentVerse
 
-**LG_AgentVerse** is a web application that leverages LangGraph agents to create a variety of interactive use cases. Built with a FastAPI backend and a React frontend, it demonstrates different agent functionalities such as a basic chatbot and many more.
+**AgentVerse** is a web application that leverages LangGraph agents to create a variety of interactive use cases. Built with a FastAPI backend and a React frontend, it demonstrates different agent functionalities such as a basic chatbot and many more.
 
 ## 🚀 Features
 
@@ -12,7 +12,7 @@
 ## 📁 Project Structure
 
 ```
-LG_AgentVerse/
+AgentVerse/
 ├── Backend/src/backend/                  # Backend (FastAPI) source code
 │                  └── src/               # Backend source code, API routes
 │                  └── main.py
@@ -34,8 +34,8 @@ LG_AgentVerse/
 ### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/jain40470/LG_AgentVerse.git
-cd LG_AgentVerse
+git clone https://github.com/jain40470/AgentVerse.git
+cd AgentVerse
 ```
 
 ### Step 2: Install Backend Dependencies
@@ -54,7 +54,7 @@ cd LG_AgentVerse
 
 ### Step 3: Install Frontend Dependencies
 
-1. Navigate to the `frontend/` directory:
+1. Navigate to the `verse_frontend/` directory:
 
    ```bash
    cd verse_frontend
