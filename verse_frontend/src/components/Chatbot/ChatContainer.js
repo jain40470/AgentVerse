@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ChatBox from './Chatbot/ChatBox';
-import MessageInput from './Chatbot/MessageInput';
-import { fetchResponse_chatbot } from '../utils/chatbot_api';
+
+import ChatBox from './ChatBox'
+import MessageInput from './MessageInput';
+
+import {fetchResponse_chatbot} from '../../utils/chatbot_api'
 
 const ChatContainer = () => {
   const [message, setMessage] = useState("");  // User's input message

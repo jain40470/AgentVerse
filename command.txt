@@ -28,3 +28,7 @@ git status
 git add .
 git commit -m "message"
 git push origin main
+
+# To delete a env
+
+rm -rf env

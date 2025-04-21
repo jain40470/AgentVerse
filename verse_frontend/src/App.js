@@ -1,10 +1,11 @@
 import React from 'react';
-import ChatContainer from './components/ChatContainer';
+import ChatContainer from './components/Chatbot/ChatContainer';
+import CodeReview from './components/CodeReviewer/CodeReview';
 
 const App = () => {
   return (
     <>
-    {/* Hi */}
+    <CodeReview/>
     <div className="app-container">
        <ChatContainer />
     </div>
@@ -14,3 +15,4 @@ const App = () => {
 
 export default App;
 
+// I have taken help of AI for frontend css 
