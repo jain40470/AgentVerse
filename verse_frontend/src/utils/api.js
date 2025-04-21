@@ -1,6 +1,6 @@
 export const fetchResponse = async (message) => {
   try {
-    const response = await fetch("http://localhost:8000/process-message", {
+    const response = await fetch("http://localhost:8000/chatbot", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

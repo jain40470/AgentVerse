@@ -8,9 +8,9 @@ from LLMs.groqllm  import GroqLLM
 
 router = APIRouter()
 
-@router.post("/process-message")
+@router.post("/chatbot")
 
-def process_message(req: MessageRequest):
+def chatbot(req: MessageRequest):
     
     try:
         
