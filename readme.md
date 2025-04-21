@@ -57,7 +57,7 @@ cd LG_AgentVerse
 1. Navigate to the `frontend/` directory:
 
    ```bash
-   cd frontend
+   cd verse_frontend
    ```
 
 2. Install Node.js dependencies:
