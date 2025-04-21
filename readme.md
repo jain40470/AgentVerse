@@ -16,7 +16,7 @@ LG_AgentVerse/
 ├── Backend/src/backend/                  # Backend (FastAPI) source code
 │                  └── src/               # Backend source code, API routes
 │                  └── main.py
-├── frontend/                 # Frontend (React) code
+├── verse_frontend/                 # Frontend (React) code
 │   └── public/               # Public assets (HTML, images)
 │   └── src/                  # React components, state management
 ├── .gitignore                # Git ignore file
