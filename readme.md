@@ -87,13 +87,13 @@ cd AgentVerse
 ## 🧑‍💻 Usage
 
 - **Basic Chatbot**: Interact with a LangGraph-powered chatbot through the frontend.
-<!-- - **Code Reviewer**: Submit code snippets to get feedback and suggestions from the LangGraph agent. -->
+- **Code Reviewer**: Submit code snippets to get feedback and suggestions from the LangGraph agent.
 - **Many more to add**
 
 ### Example API Usage
 
 - **Chatbot**: Send a POST request to `/chabot` with a user message to receive a response from the chatbot.
-<!-- - **Code Review**: Send a POST request to `/code-review` with the code you want to be reviewed, and the agent will provide feedback. -->
+- **Code Review**: Send a POST request to `/reviewcode` with the code you want to be reviewed, and the agent will provide feedback.
 
 ## 📄 License
 
