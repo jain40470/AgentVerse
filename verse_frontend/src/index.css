@@ -81,3 +81,112 @@ body {
     align-self: flex-start;
   }
   
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .app-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .main-header {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  .code-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  .code-textarea {
+    font-family: monospace;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #0070f3;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #005ad3;
+  }
+  
+  .summary-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .summary-header {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .review-card {
+    margin-bottom: 16px;
+    padding: 12px;
+    border-left: 4px solid #0070f3;
+    background-color: #f0f4ff;
+    border-radius: 6px;
+  }
+  
+  .review-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #222;
+  }
+  
+  .review-content {
+    color: #444;
+  }
+  
+  .review-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .review-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #333;
+  }
+  
+  .review-paragraph {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .review-item {
+    margin-left: 20px;
+    list-style-type: disc;
+    color: #333;
+  }
+  
+  .review-content {
+    padding-left: 0;
+  }
+  

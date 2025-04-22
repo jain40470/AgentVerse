@@ -47,12 +47,14 @@ const ChatContainer = () => {
   };
 
   return (
+    <div className="app-container">
     <div className="chat-container">
       {/* Render the chat history */}
       <ChatBox chatHistory={chatHistory} />
 
       {/* Render the message input and send button */}
       <MessageInput message={message} setMessage={setMessage} handleSendMessage={handleSendMessage} />
+    </div>
     </div>
   );
 };
