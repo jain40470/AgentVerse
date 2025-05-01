@@ -16,7 +16,7 @@ from models.yt_model import YTResponse , YTurlInput
 
 router = APIRouter()
 
-#Stock intelligence
+#Stock intelligence.
 @router.post("/stock_agent")
 def stock_intelligence_agent(req : Stock_query):
     
@@ -76,12 +76,6 @@ def yt_transcript_analysis(req : YTurlInput):
             "topic" : response["topic"],
             "summary" : response["summary"]
         }
-        # content = {
-        #     "author" : "response",
-        #     "author_info" : "response",
-        #     "topic" : "response",
-        #     "summary" : "response"
-        # }
         return content
     
     except Exception as e:

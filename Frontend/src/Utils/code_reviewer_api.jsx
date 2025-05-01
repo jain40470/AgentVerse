@@ -12,4 +12,4 @@ export const fetchReview = async (code) => {
 // https://agentverse-jnkb.onrender.com
 // http://localhost:8000/review_code
 // def fun(a , b):
-// return a + b
+// return a + b.

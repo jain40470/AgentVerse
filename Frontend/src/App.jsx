@@ -3,8 +3,9 @@ import './App.css'
 
 import ChatContainer from './Components/Chatbot/ChatContainer'
 import CodeReview from './Components/CodeReviewer/CodeReview'
-
-const Home = () => <div className="p-4 text-xl font-semibold">Welcome to Home!</div>
+import StockAgent from './Components/StockIntelligence/Stock_Agent'
+import YTAgent from './Components/YT_Summary/YT_Agent'
+import Home from './Components/Home'
 
 function App() {
 
@@ -14,8 +15,8 @@ function App() {
     Home: <Home />,
     BasicChatBot : <ChatContainer/> ,
     CodeReviewer : <CodeReview/> ,
-    YT_Video_Summary : <Home/>, 
-    Stock_Intelligence : <Home/>,
+    YTVideoSummary : <YTAgent/> , 
+    StockIntelligence : <StockAgent/>,
   }
 
   const menuItems = Object.keys(components)

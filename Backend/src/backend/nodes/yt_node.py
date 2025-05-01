@@ -97,7 +97,7 @@ class YT_Node:
        Your task is to generate a **detailed, entailed summary** of the following YouTube transcript. The summary should sound like it's written entirely in your **unique voice**—reflecting your tone, perspective, and domain expertise.
 
         Instructions:
-        - Write a **detailed summary** that thoroughly captures all key points, arguments, examples, and conclusions.
+        - Write a **Very detailed summary** that thoroughly captures all key points, arguments, examples, and conclusions.
         - Every statement must be **entailed**—fully supported by the content in the transcript (no hallucinations or external assumptions).
         - Reflect the **structure and progression** of ideas in the transcript.
         - Use a style and vocabulary that **aligns with how you speak or write** to your audience (e.g., blog, podcast, or talk).

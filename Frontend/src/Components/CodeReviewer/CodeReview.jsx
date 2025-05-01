@@ -16,8 +16,8 @@ const CodeReview = () => {
   <div className="max-w-4xl mx-auto p-6">
     <h1 className="text-3xl font-semibold mb-4 text-center text-gray-800">Code Review Assistant</h1>
     <div className="flex flex-col space-y-6 h-160 overflow-y-auto">
-      {summary && <ReviewSummaryDisplay summary={summary} />}
       <CodeInput onSubmit={handleSubmit} />
+      {summary && <ReviewSummaryDisplay summary={summary} />}
     </div>
   </div>
 
