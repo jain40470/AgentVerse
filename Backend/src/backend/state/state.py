@@ -3,6 +3,7 @@ from typing_extensions import TypedDict
 from langgraph.graph.message import add_messages
 from models.request_model import ReviewSummary
 
+
 # For basicchatbot
 class State(TypedDict):
 
@@ -14,7 +15,6 @@ class State(TypedDict):
 
 
 # For CodeReviewer
-
 class CodeReviewerState(TypedDict):
     
     code : str

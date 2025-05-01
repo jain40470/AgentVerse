@@ -1,14 +1,12 @@
-from pydantic import BaseModel
+from pydantic import BaseModel , Field
 from typing import Optional
 
 
 # For basicchatbot 
-
 class MessageRequest(BaseModel):
     message: str
 
 # For CodeReviewer
-
 class ReviewSummary(BaseModel):
     language : str
     lint_analysis: str
@@ -20,3 +18,4 @@ class ReviewSummary(BaseModel):
 
 class CodeInput(BaseModel):
     code : str
+

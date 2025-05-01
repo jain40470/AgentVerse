@@ -22,6 +22,10 @@ class BasicChatbotNode :
 # For code reviewer
 class CodeReviewerNode:
 
+    """
+    Code Reviewer logic Implementation
+    """
+
     def __init__(self , model):
         self.llm = model
 
