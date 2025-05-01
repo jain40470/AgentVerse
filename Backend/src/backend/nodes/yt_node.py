@@ -1,8 +1,6 @@
 from state.yt_state import YTState
 from langchain_community.document_loaders import YoutubeLoader
 from models.yt_model import YTSpecialist
-
-from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound
 import re
 
 class YT_Node:

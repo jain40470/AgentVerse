@@ -1,17 +1,17 @@
 import React from "react";
 
-// Simple parser for markdown-like formatting
 const parseContent = (text) => {
   const lines = text.split("\n").filter(line => line.trim() !== "");
 
+  // Parse inline bold text (i.e. **bold text**)
   const parseInlineBold = (line, keyPrefix = "") => {
     const parts = line.split(/(\*\*.*?\*\*)/g); // Split by bold markers
 
     return parts.map((part, i) => {
       if (part.startsWith("**") && part.endsWith("**")) {
-        return <strong key={`${keyPrefix}-${i}`}>{part.slice(2, -2)}</strong>;
+        return <strong key={`${keyPrefix}-${i}`} className="font-bold text-blue-600">{part.slice(2, -2)}</strong>;
       }
-      return <span key={`${keyPrefix}-${i}`}>{part}</span>;
+      return <span key={`${keyPrefix}-${i}`} className="text-gray-800">{part}</span>;
     });
   };
 
@@ -20,30 +20,34 @@ const parseContent = (text) => {
 
     // Heading (line is ONLY bold, i.e., meant as a heading)
     if (trimmed.startsWith("**") && trimmed.endsWith("**") && trimmed.split("**").length === 3) {
-      return <h4 key={idx} className="review-subtitle">{trimmed.replace(/\*\*/g, "")}</h4>;
+      return (
+        <h4 key={idx} className="text-2xl font-semibold text-gray-900 mt-6">{trimmed.replace(/\*\*/g, "")}</h4>
+      );
     }
 
     // Bullet points
     if (trimmed.startsWith("*") || trimmed.startsWith("-")) {
       const content = trimmed.replace(/^(\*|-)\s*/, "");
-      return <li key={idx} className="review-item">{parseInlineBold(content, `li-${idx}`)}</li>;
+      return (
+        <li key={idx} className="ml-6 list-disc text-gray-700">
+          {parseInlineBold(content, `li-${idx}`)}
+        </li>
+      );
     }
 
     // Regular paragraph
-    return <p key={idx} className="review-paragraph">{parseInlineBold(trimmed, `p-${idx}`)}</p>;
+    return (
+      <p key={idx} className="text-gray-800 mt-4 leading-relaxed">
+        {parseInlineBold(trimmed, `p-${idx}`)}
+      </p>
+    );
   });
 };
 
-// created with help of ai
-
-
 const ReviewCard = ({ title, content }) => (
-  <div className="review-card">
-    <h3 className="review-title">{title}</h3>
-    {/* <p className="review-content">{content}</p> */}
-    <ul className="review-content">
-        {parseContent(content)}
-      </ul>
+  <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
+    <h3 className="text-3xl font-semibold text-indigo-600">{title}</h3>
+    <ul className="mt-6 space-y-4">{parseContent(content)}</ul>
   </div>
 );
 

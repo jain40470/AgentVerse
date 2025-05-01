@@ -36,7 +36,12 @@ const ChatContainer = () => {
   return (
     <div className="flex flex-col items-center bg-gray-100 min-h-screen py-6">
       <div className="bg-white rounded-lg shadow-lg w-96 p-4">
+      <div className="flex-1 overflow-auto max-h-[60vh]"> {/* Chat messages */}
         <ChatBox chatHistory={chatHistory} />
+      </div>
+        {/* <div className="flex-1 overflow-auto">
+          <ChatBox chatHistory={chatHistory} />
+        </div> */}
         <MessageInput message={message} setMessage={setMessage} handleSendMessage={handleSendMessage} />
       </div>
     </div>
