@@ -17,11 +17,6 @@ pip3 install uvicorn
 
 uvicorn main:app --reload
 
-# For Frontend React
-
-npx create-react-app verse_frontend
-cd verse_frontend
-
 # Git
 
 git status
@@ -32,3 +27,15 @@ git push origin main
 # To delete a env
 
 rm -rf env
+
+
+# For Frontend React
+
+npm create vite@latest Frontend -- --template react
+cd Frontend
+
+npm install
+
+npm install tailwindcss @tailwindcss/vite
+
+npm run dev
