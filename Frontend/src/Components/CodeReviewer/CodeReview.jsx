@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchReview } from '../../utils/code_reviewer_api';
+import { fetchReview } from '../../Utils/code_reviewer_api'
 import CodeInput from './CodeInput';
 import ReviewSummaryDisplay from './ReviewSummary';
 
