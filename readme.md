@@ -101,4 +101,4 @@ This project is licensed under the MIT License.
 
 ## 📬 Contact
 
-For inquiries or contributions, feel free to open an issue or contact [your_email@example.com](mail To :jain40470@gmail.com).
+For inquiries or contributions, feel free to open an issue or contact (mail To :jain40470@gmail.com).
