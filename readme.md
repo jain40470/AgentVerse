@@ -92,12 +92,16 @@ cd AgentVerse
   ![Chatbot LangGraph](assets/chatbot.png)
 
 - **Code Reviewer**: Submit code snippets to get feedback and suggestions from the LangGraph agent.
+  - **Endpoint:** `POST /review_code`
+  ![CodeReviewer LangGraph](assets/CodeReviewer.png)
+
+- **Stock Intelligence Agent**: A multi-tool LangGraph agent that performs stock summary,news summarization etc.
+  - **Endpoint:** `POST /chatbot`
+  ![Stock Intelligence Agent LangGraph](assets/StockIntelligence.png)
+
 - **Many more to add**
 
-### Example API Usage
 
-- **Chatbot**: Send a POST request to `/chabot` with a user message to receive a response from the chatbot.
-- **Code Review**: Send a POST request to `/reviewcode` with the code you want to be reviewed, and the agent will provide feedback.
 
 ## 📄 License
 
