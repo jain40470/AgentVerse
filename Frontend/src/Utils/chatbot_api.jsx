@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchResponse_chatbot = async (message) => {
   try {
-    const response = await axios.post("http://127.0.0.1:8000/chatbot", {
+    const response = await axios.post("https://agentverse-jnkb.onrender.com/chatbot", {
       message,
     });
     return {
@@ -25,5 +25,7 @@ export const fetchResponse_chatbot = async (message) => {
   }
 };
 
+
+// http://127.0.0.1:8000/chatbot
 // https://agentverse-jnkb.onrender.com
 // http://localhost:8000
