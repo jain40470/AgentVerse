@@ -99,8 +99,11 @@ cd AgentVerse
   - **Endpoint:** `POST /chatbot`
   ![Stock Intelligence Agent LangGraph](assets/StockIntelligence.png)
 
-- **Many more to add**
+- **YTVideoSummary**: Input a YouTube video URL and get summarized insights including topic, author, and content summary.
+  - **Endpoint:** `POST /yt_transcript_analysis`
+  ![YTVideoSummary](assets/YT_transcript.png)
 
+- **Many more to add**
 
 
 ## 📄 License
