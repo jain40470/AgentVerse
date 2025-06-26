@@ -7,6 +7,7 @@ const ChatContainer = () => {
 
   const [message, setMessage] = useState(""); 
   const [chatHistory, setChatHistory] = useState([]);  
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const storedHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
@@ -21,15 +22,18 @@ const ChatContainer = () => {
     setChatHistory(updatedChatHistory);
     localStorage.setItem('chatHistory', JSON.stringify(updatedChatHistory));
     setMessage("");
+    setLoading(true);
     try {
       console.log(message)
       const aiMessage = await fetchResponse_chatbot(message);
       const updatedHistoryWithAI = [...updatedChatHistory, aiMessage];
       setChatHistory(updatedHistoryWithAI);
       localStorage.setItem('chatHistory', JSON.stringify(updatedHistoryWithAI));
-     
     } catch (error) {
       console.error("Error sending message:", error);
+    }
+    finally{
+      setLoading(false);
     }
   };
 
@@ -38,10 +42,12 @@ const ChatContainer = () => {
       <div className="bg-white rounded-lg shadow-lg w-96 p-4">
       <div className="flex-1 overflow-auto max-h-[60vh]"> {/* Chat messages */}
         <ChatBox chatHistory={chatHistory} />
+        {loading && (
+            <div className="text-sm text-gray-500 mt-2 animate-pulse text-center">
+              Bot is typing...
+            </div>
+          )}
       </div>
-        {/* <div className="flex-1 overflow-auto">
-          <ChatBox chatHistory={chatHistory} />
-        </div> */}
         <MessageInput message={message} setMessage={setMessage} handleSendMessage={handleSendMessage} />
       </div>
     </div>
