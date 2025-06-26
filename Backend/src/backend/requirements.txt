@@ -6,4 +6,5 @@ langchain_core
 typing
 fastapi
 yfinance
+youtube-transcript-api
 langchain_community

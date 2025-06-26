@@ -1,7 +1,8 @@
 # To create a env
 
 python3 -m venv AgentVerse
-source AgentVerse/bin/activate
+
+
 pip install ipykernel
 python -m ipykernel install --user --name=AgentVerse --display-name "Python (AgentVerse)"
 
@@ -19,6 +20,7 @@ uvicorn main:app --reload
 
 # Git
 
+git remote add origin https://github.com/jain40470/AgentVerse.git
 git status
 git add .
 git commit -m "message"

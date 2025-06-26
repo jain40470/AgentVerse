@@ -47,7 +47,7 @@ class YT_Node:
     
         except Exception as e:
             # If any error occurs (e.g., invalid URL, failed video loading), return an appropriate message
-            return {"transcript": f"{e}"}
+            return {"transcript": f"Transcript not available and {e}"}
         
     
     def assign_topic(self,state : YTState):
