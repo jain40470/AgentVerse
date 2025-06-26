@@ -84,9 +84,13 @@ cd AgentVerse
 
    Visit `http://localhost:3000` to interact with the agents.
 
+<!--  -->
 ## 🧑‍💻 Usage
 
 - **Basic Chatbot**: Interact with a LangGraph-powered chatbot through the frontend.
+  - **Endpoint:** `POST /chatbot`
+  ![Chatbot LangGraph](assets/chatbot.png)
+
 - **Code Reviewer**: Submit code snippets to get feedback and suggestions from the LangGraph agent.
 - **Many more to add**
 
