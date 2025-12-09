@@ -9,10 +9,10 @@ origins = ["http://localhost:3000"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=["*"],  # Allow requests from any domain (not secure for productio if there login type auth)
+    allow_credentials=True, # Allow cookies, auth headers, etc. to be sent
+    allow_methods=["*"], # Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
+    allow_headers=["*"], # Allow all custom headers in request
 )
 
 app.include_router(agentic_router)

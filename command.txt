@@ -41,3 +41,9 @@ npm install
 npm install tailwindcss @tailwindcss/vite
 
 npm run dev
+
+
+
+
+# develop a login based system , in which chat is saved to db and serving multiple agents 
+# including rag too.

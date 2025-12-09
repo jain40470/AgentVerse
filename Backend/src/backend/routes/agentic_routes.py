@@ -16,7 +16,7 @@ from models.yt_model import YTResponse , YTurlInput
 
 router = APIRouter()
 
-#Stock intelligence.
+#Stock intelligence
 @router.post("/stock_agent")
 def stock_intelligence_agent(req : Stock_query):
     
@@ -47,8 +47,10 @@ def stock_intelligence_agent(req : Stock_query):
         return {"report" : report}
     
     except Exception as e:
-        print("hi3")
-        raise ValueError(f"Error occured here : {e}")
+        
+        raise HTTPException(status_code=500, detail=str(e))
+        # print("hi3")
+        # raise ValueError(f"Error occured here : {e}")
 
 
 # For YT_Transript Analsysis
@@ -61,6 +63,7 @@ def yt_transcript_analysis(req : YTurlInput):
         usecase = "YT_AI"
         model = obj_llm.get_llm_model()
         print(req.url)
+
         if not model:
             raise HTTPException(status_code=500, detail="LLM model could not be initialized.")
         graph_builder = YT_GRAPH_Builder(model)
@@ -76,11 +79,13 @@ def yt_transcript_analysis(req : YTurlInput):
             "topic" : response["topic"],
             "summary" : response["summary"]
         }
+        
         return content
     
     except Exception as e:
 
-        raise ValueError(f"Error occured here : {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+        # raise ValueError(f"Error occured here : {e}")
 
 # code Reviewer
 @router.post("/review_code" , response_model = ReviewSummary)
@@ -110,7 +115,8 @@ def code_reviewer(req : CodeInput ):
     
     except Exception as e:
 
-        raise ValueError(f"Error occured here : {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+        # raise ValueError(f"Error occured here : {e}")
     
 
 # basic chatbot
@@ -146,5 +152,6 @@ def chatbot(req: MessageRequest):
 
     except Exception as e:
 
-        return {"message": f"Error occured here : {e}"}
+        raise HTTPException(status_code=500, detail=str(e))
+        # return {"message": f"Error occured here : {e}"}
 

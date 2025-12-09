@@ -5,8 +5,17 @@ export const fetchReview = async (code) => {
         const response = await axios.post("https://agentverse-jnkb.onrender.com/review_code", { code } );
         return response.data;
       } catch (error) {
+
         console.error("API Error:", error);
+
+        const errorMessage =
+        error.response?.data?.detail ||  // Full backend detail
+        error.message ||                 // Axios message fallback
+        "Something went wrong!";         // Final fallback
+    
+        alert(errorMessage); // Show entire detail as popup
         throw error;
+        
       }
 }
 // https://agentverse-jnkb.onrender.com
